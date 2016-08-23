@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>GASOLINERAS</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+	function initialize() {
+	  var gasolineraOaxaca = new google.maps.LatLng(17.150696,-96.81);
+	  var mapOptions = {
+		zoom: 12,
+		center: gasolineraOaxaca,
+		panControl: true,
+		zoomControl: false,
+		scaleControl: true,
+		streetViewControl: true,
+		mapTypeControl: true,
+		navigationControl: true,
+		mapTypeId: google.maps.MapTypeId.SATELLITE
+		};
+
+	  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+	  var ctaLayer = new google.maps.KmlLayer({
+	  driveFileId: "0BxghJVexkFv3c0JNVGJVOHZqcjg"
+	});
+	  ctaLayer.setMap(map);
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+	<h4> TECNOLOGIAS EMERGENTES PARA INGENIERIA DE SOFTWARE</h4>
+	<h4> CAYETANO HERRERA LUIS RICARDO</h4>
+	<h4> Mapa en Google Maps: <a href="https://www.google.com/maps/d/viewer?mid=z5fde_zJ-Rbs.kh_l-fyZjVzA">https://www.google.com/maps/d/viewer?mid=z5fde_zJ-Rbs.kh_l-fyZjVzA </a></h4>
+    <div id="map-canvas"></div>
+  </body>
+</html>
