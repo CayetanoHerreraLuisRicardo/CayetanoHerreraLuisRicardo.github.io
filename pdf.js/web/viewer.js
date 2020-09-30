@@ -3572,7 +3572,7 @@ const defaultOptions = {
     kind: OptionKind.VIEWER + OptionKind.PREFERENCE
   },
   defaultUrl: {
-    value: "CV_CAYETANO_2020_SEP.pdf",
+    value: "CV_CAYETANO_2020_SEP_GENERAL.pdf",
     kind: OptionKind.VIEWER
   },
   defaultZoomValue: {
